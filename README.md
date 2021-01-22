@@ -1,2 +1,2 @@
-# goit-js-hw-07
-JS homework 7
+# goit-js-hw-01
+js homework 1
