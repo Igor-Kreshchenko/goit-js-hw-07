@@ -20,24 +20,23 @@ const images = [
 
 const galleryRef = document.querySelector('#gallery');
 
-const imagesMap = images.reduce(
-  (acc, image) =>
-    acc +
-    `<li><img class = "img" src="${image.url}" alt="${image.alt}"></img></li>`,
+const galleryElements = images.reduce(
+  (acc, { url, alt }) =>
+    acc + `<li><img class = "img" src="${url}" alt="${alt}"></img></li>`,
   '',
 );
 
-galleryRef.insertAdjacentHTML('beforeend', imagesMap);
+galleryRef.insertAdjacentHTML('beforeend', galleryElements);
 
 // Другое решение
 // const galleryRef = document.querySelector('#gallery');
 
-// const createElementRef = element => document.createElement('li');
-// const createImgRef = img => document.createElement('img');
+// const createElement = element => document.createElement('li');
+// const createImg = img => document.createElement('img');
 
 // const elementsMap = images.map(element => {
-//   const newElement = createElementRef(element);
-//   const image = createImgRef(element);
+//   const newElement = createElement(element);
+//   const image = createImg(element);
 //   image.setAttribute('src', element.url);
 //   image.setAttribute('alt', element.alt);
 //   image.classList.add('img');
