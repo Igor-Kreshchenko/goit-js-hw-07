@@ -1,0 +1,17 @@
+body {
+  background-color: grey;
+  padding-top: 100px;
+}
+
+#gallery {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+
+.img {
+  border: 2px solid white;
+  width: 380px;
+  height: 250px;
+}
