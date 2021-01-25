@@ -1,21 +1,20 @@
-const listRef = document.querySelector('#categories');
-const categoriesRef = document.querySelectorAll('.item');
+const categoriesListRef = document.querySelector('#categories');
+const allCategories = document.querySelectorAll('.item');
 
-const getCategoriesNumber = function (listRef) {
-  const categoriesNumber = listRef.children.length;
+getCategoriesNumber();
+showDescrOfCategories();
+
+function getCategoriesNumber() {
+  const categoriesNumber = categoriesListRef.children.length;
 
   console.log(`В списке ${categoriesNumber} категории`);
-};
+}
 
-getCategoriesNumber(listRef);
-
-const showDescrOfCategories = function (categories) {
-  categories.forEach(category => {
+function showDescrOfCategories() {
+  allCategories.forEach(category => {
     console.log(`Категория: ${category.firstElementChild.textContent}`);
     console.log(
       `Количество элементов: ${category.lastElementChild.children.length}`,
     );
   });
-};
-
-showDescrOfCategories(categoriesRef);
+}
