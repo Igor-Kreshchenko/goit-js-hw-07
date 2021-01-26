@@ -28,7 +28,7 @@ const galleryElements = images.reduce(
 
 galleryRef.insertAdjacentHTML('afterbegin', galleryElements);
 
-// Другое решение
+// Другое решение (через createElement)
 
 // const galleryRef = document.querySelector('#gallery');
 
