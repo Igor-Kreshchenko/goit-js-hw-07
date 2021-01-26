@@ -26,23 +26,25 @@ const galleryElements = images.reduce(
   '',
 );
 
-galleryRef.insertAdjacentHTML('beforeend', galleryElements);
+galleryRef.insertAdjacentHTML('afterbegin', galleryElements);
 
 // Другое решение
+
 // const galleryRef = document.querySelector('#gallery');
 
-// const createElement = element => document.createElement('li');
-// const createImg = img => document.createElement('img');
+// const createItem = element => {
+//   const newElement = document.createElement('li');
+//   const newImage = document.createElement('img');
 
-// const elementsMap = images.map(element => {
-//   const newElement = createElement(element);
-//   const image = createImg(element);
-//   image.setAttribute('src', element.url);
-//   image.setAttribute('alt', element.alt);
-//   image.classList.add('img');
+//   newImage.setAttribute('src', element.url);
+//   newImage.setAttribute('alt', element.alt);
+//   newImage.classList.add('img');
 
-//   newElement.appendChild(image);
+//   newElement.appendChild(newImage);
 //   return newElement;
-// });
+// };
 
-// galleryRef.append(...elementsMap);
+// const allImages = images.map(image => createItem(image));
+// console.log(allImages);
+
+// galleryRef.append(...allImages);
