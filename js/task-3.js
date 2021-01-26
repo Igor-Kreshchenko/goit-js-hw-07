@@ -22,7 +22,7 @@ const galleryRef = document.querySelector('#gallery');
 
 const galleryElements = images.reduce(
   (acc, { url, alt }) =>
-    acc + `<li><img class = "img" src="${url}" alt="${alt}"></img></li>`,
+    acc + `<li><img class = "img" src= ${url} alt= ${alt} ></img></li>`,
   '',
 );
 

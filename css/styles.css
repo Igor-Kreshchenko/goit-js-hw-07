@@ -1,6 +1,12 @@
 body {
   background-color: grey;
-  padding-top: 100px;
+}
+
+.box {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 #gallery {
@@ -14,6 +20,7 @@ body {
   border: 2px solid white;
   width: 380px;
   height: 250px;
+  border-radius: 5px;
 }
 
 /* task 4 */
@@ -23,6 +30,7 @@ button {
   height: 50px;
   border-radius: 10px;
   font-size: 24px;
+  background-color: #f44336;
 }
 
 #value {

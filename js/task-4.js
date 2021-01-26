@@ -9,10 +9,10 @@ const decrementFn = () => {
   counterValueRef.textContent = counterValue;
 };
 
-const incrementFn = () => {
+function incrementFn() {
   counterValue += 1;
   counterValueRef.textContent = counterValue;
-};
+}
 
 buttonDecrRef.addEventListener('click', decrementFn);
 buttonIncrRef.addEventListener('click', incrementFn);
