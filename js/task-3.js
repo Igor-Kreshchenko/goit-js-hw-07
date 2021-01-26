@@ -32,12 +32,12 @@ galleryRef.insertAdjacentHTML('afterbegin', galleryElements);
 
 // const galleryRef = document.querySelector('#gallery');
 
-// const createItem = element => {
+// const createItem = ({ url, alt }) => {
 //   const newElement = document.createElement('li');
 //   const newImage = document.createElement('img');
 
-//   newImage.setAttribute('src', element.url);
-//   newImage.setAttribute('alt', element.alt);
+//   newImage.src = url;
+//   newImage.alt = alt;
 //   newImage.classList.add('img');
 
 //   newElement.appendChild(newImage);
@@ -45,6 +45,5 @@ galleryRef.insertAdjacentHTML('afterbegin', galleryElements);
 // };
 
 // const allImages = images.map(image => createItem(image));
-// console.log(allImages);
 
 // galleryRef.append(...allImages);
