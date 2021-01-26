@@ -10,11 +10,11 @@ const ingredients = [
 const ingredientsListRef = document.querySelector('#ingredients');
 
 const createElement = element => {
-  const newElementRef = document.createElement('li');
-  newElementRef.textContent = element;
-  return newElementRef;
+  const newElement = document.createElement('li');
+  newElement.textContent = element;
+  return newElement;
 };
 
-const ingredientsMap = ingredients.map(ingredient => createElement(ingredient));
+const allIngredients = ingredients.map(ingredient => createElement(ingredient));
 
-ingredientsListRef.append(...ingredientsMap);
+ingredientsListRef.append(...allIngredients);
