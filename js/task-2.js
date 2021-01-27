@@ -15,6 +15,6 @@ const createElement = element => {
   return newElement;
 };
 
-const allIngredients = ingredients.map(ingredient => createElement(ingredient));
+const allIngredients = ingredients.map(createElement);
 
 ingredientsListRef.append(...allIngredients);
