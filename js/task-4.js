@@ -4,10 +4,10 @@ const buttonIncrRef = document.querySelector('button[data-action="increment"]');
 
 let counterValue = Number(counterValueRef.textContent);
 
-const decrementFn = () => {
+function decrementFn() {
   counterValue -= 1;
   counterValueRef.textContent = counterValue;
-};
+}
 
 function incrementFn() {
   counterValue += 1;

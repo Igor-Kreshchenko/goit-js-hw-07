@@ -1,13 +1,13 @@
 const inputRef = document.querySelector('#validation-input');
 const dataLengthValue = inputRef.getAttribute('data-length');
 
-const validationCheck = () => {
-  if (inputRef.value.length !== Number(dataLengthValue)) {
-    inputRef.classList.add('invalid');
-    inputRef.classList.remove('valid');
+const validationCheck = function () {
+  if (this.value.length !== Number(dataLengthValue)) {
+    this.classList.add('invalid');
+    this.classList.remove('valid');
   } else {
-    inputRef.classList.add('valid');
-    inputRef.classList.remove('invalid');
+    this.classList.add('valid');
+    this.classList.remove('invalid');
   }
 };
 
