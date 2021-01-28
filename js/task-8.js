@@ -4,26 +4,31 @@ const boxesRef = document.querySelector('#boxes');
 const createBtnRef = document.querySelector('button[data-action="render"]');
 const clearBtnRef = document.querySelector('button[data-action="destroy"]');
 
-const numberOfBoxes = Number(inputRef.value);
+function createBoxes(amount) {
+  amount = inputRef.value;
+  const allBoxes = [];
+  let firstBoxSize = 30;
 
-const createBoxes = function (amount) {
-  const allEls = [];
+  for (let i = 1; i <= amount; i += 1) {
+    const newBox = document.createElement('div');
+    const randomColor = (0x1000000 + Math.random() * 0xffffff)
+      .toString(16)
+      .substr(1, 6);
 
-  for (let i = 0; i <= amount; i += 1) {
-    const newEl = document.createElement('div');
-    newEl.style.backgroundColor = 'tomato';
-    newEl.style.width = '30px';
-    newEl.style.height = '30px';
+    newBox.style.backgroundColor = '#' + randomColor;
+    newBox.style.width = `${firstBoxSize}px`;
+    newBox.style.height = `${firstBoxSize}px`;
 
-    allEls.push(newEl);
+    allBoxes.push(newBox);
+    firstBoxSize += 10;
   }
 
-  return allEls;
-};
+  boxesRef.append(...allBoxes);
+}
 
-console.log(createBoxes(5));
+function destroyBoxes() {
+  boxesRef.innerHTML = '';
+}
 
-createBtnRef.addEventListener(
-  'click',
-  boxesRef.append(...createBoxes(numberOfBoxes)),
-);
+createBtnRef.addEventListener('click', createBoxes);
+clearBtnRef.addEventListener('click', destroyBoxes);
