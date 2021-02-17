@@ -1,8 +1,12 @@
 const inputRef = document.querySelector('#controls > input');
 const boxesRef = document.querySelector('#boxes');
-
 const createBtnRef = document.querySelector('button[data-action="render"]');
 const clearBtnRef = document.querySelector('button[data-action="destroy"]');
+
+createBtnRef.addEventListener('click', createBoxes);
+clearBtnRef.addEventListener('click', destroyBoxes);
+
+let amount = 0;
 
 function createBoxes(amount) {
   amount = inputRef.value;
@@ -29,6 +33,3 @@ function createBoxes(amount) {
 function destroyBoxes() {
   boxesRef.innerHTML = '';
 }
-
-createBtnRef.addEventListener('click', createBoxes);
-clearBtnRef.addEventListener('click', destroyBoxes);
