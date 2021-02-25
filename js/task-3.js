@@ -16,8 +16,6 @@ const images = [
   },
 ];
 
-// Решение через insertAdjacentHTML
-
 const galleryRef = document.querySelector('#gallery');
 
 const galleryElements = images.reduce(
@@ -28,22 +26,4 @@ const galleryElements = images.reduce(
 
 galleryRef.insertAdjacentHTML('afterbegin', galleryElements);
 
-// Другое решение (через createElement)
 
-// const galleryRef = document.querySelector('#gallery');
-
-// const createItem = ({ url, alt }) => {
-//   const newElement = document.createElement('li');
-//   const newImage = document.createElement('img');
-
-//   newImage.src = url;
-//   newImage.alt = alt;
-//   newImage.classList.add('img');
-
-//   newElement.appendChild(newImage);
-//   return newElement;
-// };
-
-// const allImages = images.map(image => createItem(image));
-
-// galleryRef.append(...allImages);
